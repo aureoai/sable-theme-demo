@@ -1,0 +1,31 @@
+.main-404 {
+  width: 100%;
+  padding-block: var(--section-pad-block);
+  min-height: 60svh;
+  display: grid;
+  align-content: center;
+}
+
+.main-404__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--type-display-m-size);
+  font-weight: var(--weight-black);
+  line-height: var(--type-display-m-lh);
+  letter-spacing: var(--type-display-m-ls);
+  text-transform: uppercase;
+}
+
+.main-404__body {
+  margin: var(--space-5) 0 0;
+  max-width: var(--measure-narrow);
+  color: var(--color-text-current-muted);
+  font-family: var(--font-body);
+  font-size: var(--type-body-lg-size);
+  line-height: var(--type-body-lg-lh);
+}
+
+.main-404__action {
+  margin-block-start: var(--space-7);
+}
+

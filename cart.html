@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" class="no-js"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your cart | Sable</title>
+<meta name="description" content="Live demo of Sable, a streetwear theme for Shopify. Demo products and artwork are placeholders.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:wght@900&display=swap">
+<link rel="stylesheet" href="assets/design-tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/header.css">
+<link rel="stylesheet" href="assets/component-container.css">
+<link rel="stylesheet" href="assets/component-button.css">
+<link rel="stylesheet" href="assets/component-pagination.css">
+<link rel="stylesheet" href="assets/component-quantity.css">
+<link rel="stylesheet" href="assets/component-cart-line.css">
+<style>
+  :root {
+    --palette-ink: #0D0C0A;
+    --palette-cream: #F3EFE6;
+    --palette-accent: #D8C08A;
+    --palette-accent-strong: #82672B;
+    --palette-accent-hover: #E6D3A6;
+
+    --container-standard: 1440px;
+    --radius-sm: 2px;
+    --font-display: Playfair Display, serif;
+    --font-body: Jost, sans-serif;
+  }
+</style>
+
+<link rel="stylesheet" href="assets/demo.css">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<script>window.Shopify = window.Shopify || {routes: {root: '/'}};</script>
+<script src="assets/demo.js"></script>
+<script src="assets/header.js" defer></script>
+<script src="assets/cart.js" defer></script>
+</head><body class="template-cart" data-demo-page="cart">
+<a class="skip-link" href="#MainContent">Skip to content</a>
+<div id="shopify-section-announcement-bar" class="shopify-section"><div class="announcement-bar surface-dark announcement-bar--align-edges" data-announcement-bar>
+    <div class="announcement-bar__inner"><span class="announcement-bar__item" ><span class="announcement-bar__text">Drop 01 Is Live</span>
+          </span><span class="announcement-bar__item" ><span class="announcement-bar__text">Members Get Early Access</span>
+          </span></div>
+  </div>
+</div>
+<div id="shopify-section-header" class="shopify-section"><header
+  class="header surface-dark"
+  data-header
+  
+><div class="header__inner container"><div class="header__cluster header__cluster--start">
+      <button
+        type="button"
+        class="header__control header__menu-toggle"
+        aria-expanded="false"
+        aria-controls="MobileMenu"
+        data-menu-toggle
+      >
+        <svg class="icon icon--menu " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.75 6.5h16.5"/><path d="M3.75 12h16.5"/><path d="M3.75 17.5h16.5"/></svg>
+
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div><div class="header__branding"><a
+          class="header__logo-link"
+          href="index.html"
+          
+        >
+          <span class="header__wordmark">Sable</span>
+        </a></div><nav class="header__nav" aria-label="Primary">
+      <ul class="header__nav-list" role="list"><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html"
+                
+              >Home</a>
+            </li><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="collection.html"
+                
+              >Shop</a>
+            </li><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html#story"
+                
+              >Our Story</a>
+            </li><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html#lookbook"
+                
+              >Lookbook</a>
+            </li></ul>
+    </nav><div class="header__cluster header__cluster--end"><a class="header__control" href="search.html" data-search-trigger>
+          <svg class="icon icon--search " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.25"/><path d="M15.6 15.6 20.5 20.5"/></svg>
+
+          <span class="visually-hidden">Search</span>
+        </a><shopify-account
+          class="header__control header__account"
+          menu="customer-account-main-menu"
+        >
+          <span class="header__account-avatar" slot="signed-out-avatar">
+            <svg class="icon icon--account " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.25" r="3.75"/><path d="M4.75 19.75a7.25 7.25 0 0 1 14.5 0"/></svg>
+
+            <span class="visually-hidden">Account</span>
+          </span>
+        </shopify-account><a
+          class="header__control header__cart"
+          href="cart.html"
+          data-cart-bubble
+          
+        >
+          <svg class="icon icon--cart " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.5 7.75h13l-1.1 11.3a1.4 1.4 0 0 1-1.4 1.2H8a1.4 1.4 0 0 1-1.4-1.2Z"/><path d="M9 10V6.9a3 3 0 0 1 6 0V10"/></svg>
+
+<span class="visually-hidden">Cart</span><span class="header__cart-count" data-cart-count aria-hidden="true">4</span>
+  <span class="visually-hidden" data-cart-count-text>4 items</span>
+        </a></div>
+  </div><div class="header__search" id="HeaderSearch" data-search-panel hidden>
+    <form
+      class="header__search-form"
+      action="search.html"
+      method="get"
+      role="search"
+    >
+      <label class="visually-hidden" for="HeaderSearchInput">
+        Search the store
+      </label>
+      <input
+        class="header__search-input"
+        id="HeaderSearchInput"
+        type="search"
+        name="q"
+        placeholder="Search the store…"
+        data-search-input
+      ><input type="hidden" name="type" value="product">
+      <button type="submit" class="button button--primary header__search-submit">
+        Search
+      </button>
+      <button type="button" class="header__control" data-search-close>
+        <svg class="icon icon--close " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4 17.6 17.6"/><path d="M17.6 6.4 6.4 17.6"/></svg>
+
+        <span class="visually-hidden">Close search</span>
+      </button>
+    </form>
+  </div><div class="header__panel" id="MobileMenu" data-menu-panel hidden>
+    <div class="header__panel-header">
+      <span class="header__panel-title">Menu</span>
+      <button type="button" class="header__control" data-menu-close>
+        <svg class="icon icon--close " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4 17.6 17.6"/><path d="M17.6 6.4 6.4 17.6"/></svg>
+
+        <span class="visually-hidden">Close menu</span>
+      </button>
+    </div>
+
+    <nav class="header__panel-nav" aria-label="Main">
+      <ul class="header__panel-list" role="list"><li>
+              <a
+                class="header__panel-link"
+                href="index.html"
+                
+              >Home</a>
+            </li><li>
+              <a
+                class="header__panel-link"
+                href="collection.html"
+                
+              >Shop</a>
+            </li><li>
+              <a
+                class="header__panel-link"
+                href="index.html#story"
+                
+              >Our Story</a>
+            </li><li>
+              <a
+                class="header__panel-link"
+                href="index.html#lookbook"
+                
+              >Lookbook</a>
+            </li></ul>
+    </nav></div>
+
+  <div class="header__overlay" data-menu-overlay hidden></div>
+</header>
+
+
+</div>
+<main id="MainContent" tabindex="-1">
+<div id="shopify-section-main" class="shopify-section"><link rel="stylesheet" href="assets/section-main-cart.css">
+
+<div
+  class="main-cart surface-dark"
+  data-cart-page
+  data-cart-page-section="main"
+  
+>
+  <div class="main-cart__inner container">
+    <h1 class="main-cart__title" tabindex="-1" id="CartPageTitle">Your cart</h1><p class="main-cart__error" data-cart-error role="alert" hidden></p>
+
+    <div data-cart-page-inner><form
+          action="cart.html"
+          method="post"
+          id="CartPageForm"
+          class="main-cart__form"
+          data-cart-form
+        >
+          <ul class="main-cart__lines" role="list"><li class="cart-line" data-cart-line data-line-key="demo:tee" data-line-index="1">
+  <div class="cart-line__media"><a class="cart-line__media-link" href="product-everyday-tee.html" tabindex="-1" aria-hidden="true">
+        <img class="cart-line__image" src="img/product-tee-ink.webp" srcset="img/product-tee-ink.webp 76w, img/product-tee-ink.webp 96w, img/product-tee-ink.webp 120w, img/product-tee-ink.webp 152w, img/product-tee-ink.webp 192w, img/product-tee-ink.webp 240w, img/product-tee-ink.webp 300w" sizes="(min-width: 768px) 120px, 96px" width="1200" height="1200" loading="eager" decoding="async" alt="">
+      </a></div>
+
+  <div class="cart-line__detail">
+    <a class="cart-line__title" href="product-everyday-tee.html">Everyday Oversized Tee</a><p class="cart-line__variant"><span class="cart-line__variant-part">
+            <span class="visually-hidden">Colour: </span>Ink
+          </span><span aria-hidden="true"> / </span><span class="cart-line__variant-part">
+            <span class="visually-hidden">Size: </span>M
+          </span></p><div class="cart-line__controls">
+      <div
+  class="quantity"
+  data-quantity
+  data-line-key="demo:tee"
+>
+  <button
+    type="button"
+    class="quantity__button"
+    data-quantity-step="-1"
+    aria-disabled="true"
+  >
+    <svg class="icon icon--minus " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.75 12h14.5"/></svg>
+
+    <span class="visually-hidden">Decrease quantity for Everyday Oversized Tee</span>
+  </button>
+
+  <label class="visually-hidden" for="CartPage-Quantity-demo:tee-1">Quantity for Everyday Oversized Tee</label>
+  <input
+    class="quantity__input"
+    id="CartPage-Quantity-demo:tee-1"
+    type="number"
+    name="updates[]"
+    value="1"
+    min="1"
+    step="1"
+    
+    inputmode="numeric"
+    autocomplete="off"
+    form="CartPageForm"
+    
+    data-quantity-input
+  >
+
+  <button
+    type="button"
+    class="quantity__button"
+    data-quantity-step="1"
+    
+  >
+    <svg class="icon icon--plus " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4.75v14.5"/><path d="M4.75 12h14.5"/></svg>
+
+    <span class="visually-hidden">Increase quantity for Everyday Oversized Tee</span>
+  </button>
+</div>
+<a
+        class="cart-line__remove"
+        href="cart.html"
+        data-cart-remove
+        data-line-key="demo:tee"
+      >
+        <span aria-hidden="true">Remove</span>
+        <span class="visually-hidden">Remove Everyday Oversized Tee from your cart</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="cart-line__price"><span class="cart-line__price-final">$48.00</span></div>
+</li>
+<li class="cart-line" data-cart-line data-line-key="demo:hoodie" data-line-index="2">
+  <div class="cart-line__media"><a class="cart-line__media-link" href="product-heavyweight-hoodie.html" tabindex="-1" aria-hidden="true">
+        <img class="cart-line__image" src="img/product-hoodie-olive.webp" srcset="img/product-hoodie-olive.webp 76w, img/product-hoodie-olive.webp 96w, img/product-hoodie-olive.webp 120w, img/product-hoodie-olive.webp 152w, img/product-hoodie-olive.webp 192w, img/product-hoodie-olive.webp 240w, img/product-hoodie-olive.webp 300w" sizes="(min-width: 768px) 120px, 96px" width="1200" height="1200" loading="lazy" decoding="async" alt="">
+      </a></div>
+
+  <div class="cart-line__detail">
+    <a class="cart-line__title" href="product-heavyweight-hoodie.html">Heavyweight Hoodie</a><p class="cart-line__variant"><span class="cart-line__variant-part">
+            <span class="visually-hidden">Colour: </span>Olive
+          </span><span aria-hidden="true"> / </span><span class="cart-line__variant-part">
+            <span class="visually-hidden">Size: </span>L
+          </span></p><div class="cart-line__controls">
+      <div
+  class="quantity"
+  data-quantity
+  data-line-key="demo:hoodie"
+>
+  <button
+    type="button"
+    class="quantity__button"
+    data-quantity-step="-1"
+    aria-disabled="true"
+  >
+    <svg class="icon icon--minus " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.75 12h14.5"/></svg>
+
+    <span class="visually-hidden">Decrease quantity for Heavyweight Hoodie</span>
+  </button>
+
+  <label class="visually-hidden" for="CartPage-Quantity-demo:hoodie-2">Quantity for Heavyweight Hoodie</label>
+  <input
+    class="quantity__input"
+    id="CartPage-Quantity-demo:hoodie-2"
+    type="number"
+    name="updates[]"
+    value="1"
+    min="1"
+    step="1"
+    
+    inputmode="numeric"
+    autocomplete="off"
+    form="CartPageForm"
+    
+    data-quantity-input
+  >
+
+  <button
+    type="button"
+    class="quantity__button"
+    data-quantity-step="1"
+    
+  >
+    <svg class="icon icon--plus " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4.75v14.5"/><path d="M4.75 12h14.5"/></svg>
+
+    <span class="visually-hidden">Increase quantity for Heavyweight Hoodie</span>
+  </button>
+</div>
+<a
+        class="cart-line__remove"
+        href="cart.html"
+        data-cart-remove
+        data-line-key="demo:hoodie"
+      >
+        <span aria-hidden="true">Remove</span>
+        <span class="visually-hidden">Remove Heavyweight Hoodie from your cart</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="cart-line__price"><span class="visually-hidden">Sale price</span>
+      <span class="cart-line__price-final">$98.00</span>
+      <span class="visually-hidden">Regular price</span>
+      <s class="cart-line__price-original">$120.00</s></div>
+</li>
+<li class="cart-line" data-cart-line data-line-key="demo:cap" data-line-index="3">
+  <div class="cart-line__media"><a class="cart-line__media-link" href="product-six-panel-cap.html" tabindex="-1" aria-hidden="true">
+        <img class="cart-line__image" src="img/product-cap-ink.webp" srcset="img/product-cap-ink.webp 76w, img/product-cap-ink.webp 96w, img/product-cap-ink.webp 120w, img/product-cap-ink.webp 152w, img/product-cap-ink.webp 192w, img/product-cap-ink.webp 240w, img/product-cap-ink.webp 300w" sizes="(min-width: 768px) 120px, 96px" width="1200" height="1200" loading="lazy" decoding="async" alt="">
+      </a></div>
+
+  <div class="cart-line__detail">
+    <a class="cart-line__title" href="product-six-panel-cap.html">Six-Panel Cap</a><p class="cart-line__variant"><span class="cart-line__variant-part">
+            <span class="visually-hidden">Colour: </span>Ink
+          </span></p><div class="cart-line__controls">
+      <div
+  class="quantity"
+  data-quantity
+  data-line-key="demo:cap"
+>
+  <button
+    type="button"
+    class="quantity__button"
+    data-quantity-step="-1"
+    
+  >
+    <svg class="icon icon--minus " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.75 12h14.5"/></svg>
+
+    <span class="visually-hidden">Decrease quantity for Six-Panel Cap</span>
+  </button>
+
+  <label class="visually-hidden" for="CartPage-Quantity-demo:cap-3">Quantity for Six-Panel Cap</label>
+  <input
+    class="quantity__input"
+    id="CartPage-Quantity-demo:cap-3"
+    type="number"
+    name="updates[]"
+    value="2"
+    min="1"
+    step="1"
+    
+    inputmode="numeric"
+    autocomplete="off"
+    form="CartPageForm"
+    
+    data-quantity-input
+  >
+
+  <button
+    type="button"
+    class="quantity__button"
+    data-quantity-step="1"
+    
+  >
+    <svg class="icon icon--plus " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4.75v14.5"/><path d="M4.75 12h14.5"/></svg>
+
+    <span class="visually-hidden">Increase quantity for Six-Panel Cap</span>
+  </button>
+</div>
+<a
+        class="cart-line__remove"
+        href="cart.html"
+        data-cart-remove
+        data-line-key="demo:cap"
+      >
+        <span aria-hidden="true">Remove</span>
+        <span class="visually-hidden">Remove Six-Panel Cap from your cart</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="cart-line__price"><span class="cart-line__price-final">$72.00</span></div>
+</li>
+</ul>
+
+          <div class="main-cart__summary"><dl class="cart-totals">
+  <div class="cart-totals__row">
+    <dt>Subtotal</dt>
+    <dd>$218.00</dd>
+  </div><div class="cart-totals__row cart-totals__row--final">
+    <dt>Estimated total</dt>
+    <dd data-cart-total>$218.00</dd>
+  </div>
+</dl>
+
+<p class="cart-totals__note">Taxes and shipping are calculated at checkout.</p>
+<button type="submit" name="update" class="button button--secondary main-cart__update">
+              Update cart
+            </button>
+
+            <button type="submit" name="checkout" class="button button--primary button--full">
+              Checkout
+            </button><a class="main-cart__continue" href="index.html">
+              Continue shopping
+            </a>
+          </div>
+        </form></div>
+  </div>
+</div>
+
+
+</div>
+</main>
+
+<div id="CartStatus" class="visually-hidden" role="status" aria-live="polite" data-cart-no-inert></div>
+<div hidden data-cart-no-inert data-cart-strings
+  data-added="Added to your cart."
+  data-updated="Cart updated."
+  data-removed="Removed from your cart."
+  data-note-saved="Order note saved."
+  data-quantity-announce="Quantity: [count]"
+  data-error-generic="Unable to update your cart. Please try again."
+  data-error-network="We could not reach the store. Check your connection and try again."></div>
+<div id="shopify-section-brand-values" class="shopify-section"><link rel="stylesheet" href="assets/section-brand-values.css">
+
+<div class="brand-values surface-dark brand-values--cols-4 brand-values--dividers">
+  <div class="brand-values__inner container"><ul class="brand-values__list" role="list"><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--crown brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.75 17.75V7.25l4.5 4.25L12 5.5l3.75 6 4.5-4.25v10.5Z"/><path d="M3.75 14.5h16.5"/></svg>
+<span class="brand-values__title">Premium Quality</span><span class="brand-values__sub">Built To Last</span></div></li><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--community brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.25" r="2.9"/><path d="M6.9 19.25a5.1 5.1 0 0 1 10.2 0"/><circle cx="5.3" cy="10.4" r="2.15"/><path d="M2 18.5a3.75 3.75 0 0 1 2.95-3.66"/><circle cx="18.7" cy="10.4" r="2.15"/><path d="M22 18.5a3.75 3.75 0 0 0-2.95-3.66"/></svg>
+<span class="brand-values__title">The Club</span><span class="brand-values__sub">Early Access To Drops</span></div></li><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--globe brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/><path d="M4.2 7.5h15.6"/><path d="M4.2 16.5h15.6"/><path d="M12 3a5 9 0 0 1 0 18"/><path d="M12 3a5 9 0 0 0 0 18"/></svg>
+<span class="brand-values__title">Shipping</span><span class="brand-values__sub">Tracked Delivery</span></div></li><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--diamond brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.75 3.75h10.5L21 9.5 12 20.5 3 9.5Z"/><path d="M3 9.5h18"/><path d="m6.75 3.75 2.75 5.75L12 20.5"/><path d="m17.25 3.75-2.75 5.75L12 20.5"/></svg>
+<span class="brand-values__title">Limited Runs</span><span class="brand-values__sub">Never Mass-Made</span></div></li></ul></div>
+</div>
+</div>
+<div id="shopify-section-footer" class="shopify-section"><link rel="stylesheet" href="assets/section-footer.css"><footer class="footer surface-dark" role="contentinfo">
+  <div class="footer__inner container"><div class="footer__brand"><a class="footer__logo-link" href="index.html"><span class="footer__wordmark">Sable</span></a><div class="footer__lockup-text"><p class="footer__tagline">Made Slowly.<br />
+Worn Daily.</p></div><nav class="footer__social" aria-label="Social"><ul class="footer__social-list" role="list"><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--instagram " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="4.75"/><circle cx="12" cy="12" r="3.9"/><path d="M16.95 7.05h.01"/></svg>
+
+                    <span class="visually-hidden">Instagram</span>
+                  </a>
+                </li><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--facebook " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 3.25h-2.75a4.75 4.75 0 0 0-4.75 4.75v2.75H7.25v4h2.75v6.5h4v-6.5h2.75l.75-4h-3.5V8a.75.75 0 0 1 .75-.75h2.75Z"/></svg>
+
+                    <span class="visually-hidden">Facebook</span>
+                  </a>
+                </li><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--tiktok " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.75a4.25 4.25 0 1 0 4.25 4.25V3.75a5.25 5.25 0 0 0 5.25 5.25"/></svg>
+
+                    <span class="visually-hidden">TikTok</span>
+                  </a>
+                </li><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--youtube " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.9 16.85a23.6 23.6 0 0 1 0-9.7 2.1 2.1 0 0 1 1.47-1.47 48.5 48.5 0 0 1 15.26 0 2.1 2.1 0 0 1 1.47 1.47 23.6 23.6 0 0 1 0 9.7 2.1 2.1 0 0 1-1.47 1.47 48.5 48.5 0 0 1-15.26 0 2.1 2.1 0 0 1-1.47-1.47Z"/><path d="m10 14.9 4.7-2.9-4.7-2.9Z"/></svg>
+
+                    <span class="visually-hidden">YouTube</span>
+                  </a>
+                </li></ul>
+          </nav><p class="footer__strapline">Built To Be Worn</p></div><div class="footer__blocks"><nav
+                  class="footer__column"
+                  aria-labelledby="FooterMenu-shop"
+                  
+                ><h2 class="footer__heading" id="FooterMenu-shop">Shop</h2>
+                  <ul class="footer__menu" role="list"><li>
+                        <a
+                          class="footer__link"
+                          href="collection.html"
+                          
+                        >All products</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="collection.html"
+                          
+                        >New arrivals</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="collection.html"
+                          
+                        >Best sellers</a>
+                      </li></ul>
+                </nav><nav
+                  class="footer__column"
+                  aria-labelledby="FooterMenu-help"
+                  
+                ><h2 class="footer__heading" id="FooterMenu-help">Help</h2>
+                  <ul class="footer__menu" role="list"><li>
+                        <a
+                          class="footer__link"
+                          href="policy.html"
+                          
+                        >Shipping</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="policy.html"
+                          
+                        >Returns</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="our-story.html"
+                          
+                        >Our story</a>
+                      </li></ul>
+                </nav><div class="footer__column" ><h2 class="footer__heading">Contact</h2><div class="footer__text"><p>hello@example.com<br>Mon to Fri, 9 to 5</p></div></div></div><div class="footer__utility"><nav class="footer__policies" aria-label="Policies">
+            <ul class="footer__policy-list" role="list"><li>
+                    <a class="footer__link" href="policy.html">Refund policy</a>
+                  </li><li>
+                    <a class="footer__link" href="policy.html">Privacy policy</a>
+                  </li><li>
+                    <a class="footer__link" href="policy.html">Terms of service</a>
+                  </li><li>
+                    <a class="footer__link" href="policy.html">Shipping policy</a>
+                  </li></ul>
+          </nav></div><div class="footer__bottom">
+      <p class="footer__copyright">
+        © 2026 Sable
+      </p>
+    </div></div>
+</footer>
+
+
+</div>
+</body></html>

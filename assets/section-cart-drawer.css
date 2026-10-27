@@ -1,0 +1,283 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+.cart-drawer {
+  position: fixed;
+  inset-inline: 0;
+  inset-block-start: 0;
+  height: 100vh;
+  height: 100dvh;
+  z-index: var(--z-drawer);
+}
+
+.cart-drawer.surface-dark {
+  background-color: transparent;
+}
+
+.cart-drawer__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background-color: var(--color-overlay);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.cart-drawer-open .cart-drawer__overlay {
+  opacity: 1;
+}
+
+.cart-drawer__panel {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  z-index: var(--z-drawer);
+  display: flex;
+  flex-direction: column;
+  width: var(--drawer-width);
+  max-width: 100%;
+  --drawer-pad-inline-end: var(--space-5);
+  background-color: var(--color-bg-primary);
+  box-shadow: var(--shadow-on-dark);
+  transform: translateX(100%);
+  transition: transform var(--transition-medium);
+}
+
+.cart-drawer-open .cart-drawer__panel {
+  transform: translateX(0);
+}
+
+.cart-drawer__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  border-block-end: var(--border-width) solid var(--color-border-current);
+}
+
+.cart-drawer__title {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-ls);
+  text-transform: uppercase;
+}
+
+.cart-drawer__title:focus {
+  outline: none;
+}
+
+.cart-drawer__title:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.cart-drawer__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min);
+  min-height: var(--target-min);
+  margin-inline-end: calc(var(--space-2) * -1);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cart-drawer__close .icon {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
+.cart-drawer__inner {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.cart-drawer__form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.cart-drawer__scroller {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-inline: var(--space-5);
+  scroll-padding-block-end: var(--space-6);
+}
+
+.cart-drawer__lines {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cart-drawer__footer {
+  padding: var(--space-5);
+  border-block-start: var(--border-width) solid var(--color-border-current);
+  background-color: var(--color-bg-primary);
+}
+
+@supports (padding: max(0px)) {
+  .cart-drawer__footer {
+    padding-block-end: max(var(--space-5), env(safe-area-inset-bottom));
+  }
+
+  .cart-drawer__header {
+    padding-block-start: max(var(--space-5), env(safe-area-inset-top));
+  }
+
+  .cart-drawer__panel {
+    --drawer-pad-inline-end: max(var(--space-5), env(safe-area-inset-right));
+  }
+}
+
+.cart-drawer__header,
+.cart-drawer__footer,
+.cart-drawer__scroller {
+  padding-inline-end: var(--drawer-pad-inline-end);
+}
+
+.cart-drawer__error {
+  margin: var(--space-4) var(--space-5) 0;
+}
+
+.cart-drawer__actions {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.cart-drawer__inner .cart-empty {
+  padding-inline: var(--space-5);
+}
+
+.cart-js .cart-drawer__update {
+  display: none;
+}
+
+.visually-hidden--until-focus:focus-visible {
+  position: static;
+  width: auto;
+  height: auto;
+  min-height: var(--target-min);
+  margin: 0 0 var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  overflow: visible;
+  clip: auto;
+  clip-path: none;
+  border: var(--border-width) solid var(--color-border-current-interactive);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-ls);
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: normal;
+}
+
+.cart-drawer__continue {
+  display: block;
+  width: 100%;
+  min-height: var(--target-min);
+  margin-block-start: var(--space-3);
+  padding: var(--space-2);
+  border: none;
+  background: none;
+  color: var(--color-text-current-muted);
+  font-family: var(--font-body);
+  font-size: var(--type-body-sm-size);
+  letter-spacing: var(--type-label-ls);
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cart-drawer__continue:hover {
+    color: inherit;
+  }
+}
+
+.cart-drawer__continue:focus-visible {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-drawer__continue {
+    transition: none;
+  }
+}
+
+@media (max-height: 540px) and (max-width: 1023px) {
+  .cart-drawer__panel {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .cart-drawer__scroller {
+    flex: 0 0 auto;
+    overflow: visible;
+  }
+
+  .cart-drawer__header {
+    padding-block: var(--space-3);
+  }
+
+  .cart-drawer__footer {
+    padding-block: var(--space-4);
+  }
+
+  @supports (padding: max(0px)) {
+    .cart-drawer__footer {
+      padding-block-end: max(var(--space-4), env(safe-area-inset-bottom));
+    }
+
+    .cart-drawer__header {
+      padding-block-start: max(var(--space-3), env(safe-area-inset-top));
+    }
+  }
+
+  .cart-totals {
+    margin-block-end: var(--space-3);
+  }
+
+  .cart-totals__note {
+    margin-block-end: var(--space-3);
+  }
+
+  .cart-drawer__actions {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .cart-drawer__scroller .cart-line {
+    padding-block: var(--space-3);
+  }
+
+  .cart-drawer__scroller .cart-line__controls {
+    margin-block-start: var(--space-3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cart-drawer__overlay,
+  .cart-drawer__panel {
+    transition: none;
+  }
+}

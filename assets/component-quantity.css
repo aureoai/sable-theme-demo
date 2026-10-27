@@ -1,0 +1,98 @@
+.quantity {
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+  border: var(--border-width) solid var(--color-border-current-interactive);
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+}
+
+.cart-js .quantity {
+  grid-template-columns: var(--target-min) 1fr var(--target-min);
+}
+
+.quantity__button {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--target-min);
+  min-height: var(--target-min);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.cart-js .quantity__button {
+  display: flex;
+}
+
+.quantity__button .icon {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+
+.quantity__button[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.quantity__input {
+  min-width: 3ch;
+  padding: 0 var(--space-2);
+  border: 0;
+  background-color: transparent;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: var(--type-body-size);
+  font-weight: var(--type-price-weight);
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.cart-js .quantity__input {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.cart-js .quantity__input::-webkit-outer-spin-button,
+.cart-js .quantity__input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.quantity:has(.quantity__input:focus-visible) {
+  outline: var(--focus-width) solid var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.quantity:has(.quantity__input:focus-visible) .quantity__input:focus-visible {
+  outline: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .quantity__button:not([aria-disabled='true']):hover {
+    color: var(--accent-current);
+  }
+}
+
+.cart-js .quantity--compact {
+  grid-template-columns: var(--target-min) auto var(--target-min);
+}
+
+.quantity--compact .quantity__input {
+  min-width: 2ch;
+}
+
+.quantity[aria-busy='true'] {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quantity__button {
+    transition: none;
+  }
+}

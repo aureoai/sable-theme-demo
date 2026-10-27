@@ -1,0 +1,112 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: var(--target-min);
+  padding: var(--space-4) var(--space-5);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-sm);
+  background-color: transparent;
+  font-family: var(--font-body);
+  font-size: var(--type-label-size);
+  font-weight: var(--type-label-weight);
+  letter-spacing: var(--type-label-ls);
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    opacity var(--transition-fast);
+}
+
+.button .icon {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+
+.surface-light .button--primary {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .surface-light .button--primary:hover {
+    background-color: var(--color-surface-raised);
+  }
+}
+
+.surface-light .button--primary:active {
+  background-color: var(--color-bg-primary);
+}
+
+.surface-dark .button--primary {
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .surface-dark .button--primary:hover {
+    background-color: var(--color-text-secondary);
+  }
+}
+
+.surface-dark .button--primary:active {
+  background-color: var(--color-text-primary);
+}
+
+.button--secondary {
+  color: currentColor;
+  border-color: var(--color-border-current-interactive);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .surface-light .button--secondary:hover {
+    background-color: var(--color-border-inverse);
+  }
+
+  .surface-dark .button--secondary:hover {
+    background-color: var(--color-border);
+  }
+}
+
+.surface-light .button--secondary:active,
+.surface-dark .button--secondary:active {
+  background-color: transparent;
+}
+
+.surface-dark .button--accent {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .surface-dark .button--accent:hover {
+    background-color: var(--color-accent-hover);
+  }
+}
+
+.surface-dark .button--accent:active {
+  background-color: var(--color-accent);
+}
+
+.button[aria-disabled='true'],
+.button:disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+
+.button--full {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

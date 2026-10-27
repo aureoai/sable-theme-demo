@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en" class="no-js"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>All Products | Sable</title>
+<meta name="description" content="Live demo of Sable, a streetwear theme for Shopify. Demo products and artwork are placeholders.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:wght@900&display=swap">
+<link rel="stylesheet" href="assets/design-tokens.css">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/header.css">
+<link rel="stylesheet" href="assets/component-container.css">
+<link rel="stylesheet" href="assets/component-button.css">
+<link rel="stylesheet" href="assets/component-pagination.css">
+<link rel="stylesheet" href="assets/component-quantity.css">
+<link rel="stylesheet" href="assets/component-cart-line.css">
+<style>
+  :root {
+    --palette-ink: #0D0C0A;
+    --palette-cream: #F3EFE6;
+    --palette-accent: #D8C08A;
+    --palette-accent-strong: #82672B;
+    --palette-accent-hover: #E6D3A6;
+
+    --container-standard: 1440px;
+    --radius-sm: 2px;
+    --font-display: Playfair Display, serif;
+    --font-body: Jost, sans-serif;
+  }
+</style>
+
+<link rel="stylesheet" href="assets/demo.css">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<script>window.Shopify = window.Shopify || {routes: {root: '/'}};</script>
+<script src="assets/demo.js"></script>
+<script src="assets/header.js" defer></script>
+<script src="assets/cart.js" defer></script>
+</head><body class="template-collection" data-demo-page="collection">
+<a class="skip-link" href="#MainContent">Skip to content</a>
+<div id="shopify-section-announcement-bar" class="shopify-section"><div class="announcement-bar surface-dark announcement-bar--align-edges" data-announcement-bar>
+    <div class="announcement-bar__inner"><span class="announcement-bar__item" ><span class="announcement-bar__text">Drop 01 Is Live</span>
+          </span><span class="announcement-bar__item" ><span class="announcement-bar__text">Members Get Early Access</span>
+          </span></div>
+  </div>
+</div>
+<div id="shopify-section-header" class="shopify-section"><header
+  class="header surface-dark"
+  data-header
+  
+><div class="header__inner container"><div class="header__cluster header__cluster--start">
+      <button
+        type="button"
+        class="header__control header__menu-toggle"
+        aria-expanded="false"
+        aria-controls="MobileMenu"
+        data-menu-toggle
+      >
+        <svg class="icon icon--menu " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.75 6.5h16.5"/><path d="M3.75 12h16.5"/><path d="M3.75 17.5h16.5"/></svg>
+
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div><div class="header__branding"><a
+          class="header__logo-link"
+          href="index.html"
+          
+        >
+          <span class="header__wordmark">Sable</span>
+        </a></div><nav class="header__nav" aria-label="Primary">
+      <ul class="header__nav-list" role="list"><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html"
+                
+              >Home</a>
+            </li><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="collection.html"
+                
+              >Shop</a>
+            </li><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html#story"
+                
+              >Our Story</a>
+            </li><li class="header__nav-item">
+              <a
+                class="header__nav-link"
+                href="index.html#lookbook"
+                
+              >Lookbook</a>
+            </li></ul>
+    </nav><div class="header__cluster header__cluster--end"><a class="header__control" href="search.html" data-search-trigger>
+          <svg class="icon icon--search " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6.25"/><path d="M15.6 15.6 20.5 20.5"/></svg>
+
+          <span class="visually-hidden">Search</span>
+        </a><shopify-account
+          class="header__control header__account"
+          menu="customer-account-main-menu"
+        >
+          <span class="header__account-avatar" slot="signed-out-avatar">
+            <svg class="icon icon--account " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.25" r="3.75"/><path d="M4.75 19.75a7.25 7.25 0 0 1 14.5 0"/></svg>
+
+            <span class="visually-hidden">Account</span>
+          </span>
+        </shopify-account><a
+          class="header__control header__cart"
+          href="cart.html"
+          data-cart-bubble
+          aria-controls="CartDrawer"
+        >
+          <svg class="icon icon--cart " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5.5 7.75h13l-1.1 11.3a1.4 1.4 0 0 1-1.4 1.2H8a1.4 1.4 0 0 1-1.4-1.2Z"/><path d="M9 10V6.9a3 3 0 0 1 6 0V10"/></svg>
+
+<span class="visually-hidden">Cart</span>
+        </a></div>
+  </div><div class="header__search" id="HeaderSearch" data-search-panel hidden>
+    <form
+      class="header__search-form"
+      action="search.html"
+      method="get"
+      role="search"
+    >
+      <label class="visually-hidden" for="HeaderSearchInput">
+        Search the store
+      </label>
+      <input
+        class="header__search-input"
+        id="HeaderSearchInput"
+        type="search"
+        name="q"
+        placeholder="Search the store…"
+        data-search-input
+      ><input type="hidden" name="type" value="product">
+      <button type="submit" class="button button--primary header__search-submit">
+        Search
+      </button>
+      <button type="button" class="header__control" data-search-close>
+        <svg class="icon icon--close " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4 17.6 17.6"/><path d="M17.6 6.4 6.4 17.6"/></svg>
+
+        <span class="visually-hidden">Close search</span>
+      </button>
+    </form>
+  </div><div class="header__panel" id="MobileMenu" data-menu-panel hidden>
+    <div class="header__panel-header">
+      <span class="header__panel-title">Menu</span>
+      <button type="button" class="header__control" data-menu-close>
+        <svg class="icon icon--close " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4 17.6 17.6"/><path d="M17.6 6.4 6.4 17.6"/></svg>
+
+        <span class="visually-hidden">Close menu</span>
+      </button>
+    </div>
+
+    <nav class="header__panel-nav" aria-label="Main">
+      <ul class="header__panel-list" role="list"><li>
+              <a
+                class="header__panel-link"
+                href="index.html"
+                
+              >Home</a>
+            </li><li>
+              <a
+                class="header__panel-link"
+                href="collection.html"
+                
+              >Shop</a>
+            </li><li>
+              <a
+                class="header__panel-link"
+                href="index.html#story"
+                
+              >Our Story</a>
+            </li><li>
+              <a
+                class="header__panel-link"
+                href="index.html#lookbook"
+                
+              >Lookbook</a>
+            </li></ul>
+    </nav></div>
+
+  <div class="header__overlay" data-menu-overlay hidden></div>
+</header>
+
+
+</div>
+<main id="MainContent" tabindex="-1">
+<div id="shopify-section-main" class="shopify-section"><link rel="stylesheet" href="assets/component-product-card.css">
+<link rel="stylesheet" href="assets/section-main-collection.css"><link rel="stylesheet" href="assets/component-facets.css">
+  <script src="assets/facets.js" defer="defer"></script><style>
+  #shopify-section-main .product-grid { --product-cols: 2; }
+  @media (min-width: 768px) {
+    #shopify-section-main .product-grid { --product-cols: 2; }
+  }
+  @media (min-width: 1024px) {
+    #shopify-section-main .product-grid { --product-cols: 4; }
+  }
+</style>
+
+<div
+  class="main-collection surface-light"
+  data-collection-page
+  data-collection-section="main"
+  
+><div class="main-collection__inner container">
+    <div class="main-collection__header"><h1 class="main-collection__title">All Products</h1><div class="main-collection__description rte"><p>Heavyweight basics, made in small runs.</p></div></div><div class="facets" data-facets><div class="facets__bar">
+      <p class="facets__bar-title">Filter</p>
+      <button
+        type="button"
+        class="facets__close"
+        data-facets-close
+      >
+        <svg class="icon icon--close " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4 17.6 17.6"/><path d="M17.6 6.4 6.4 17.6"/></svg>
+
+        <span class="visually-hidden">Close filters</span>
+      </button>
+    </div>
+
+    <div class="facets__groups"><details
+            class="facets__group"
+            
+          >
+            <summary class="facets__summary">
+              <span class="facets__summary-label">Size</span><svg class="icon icon--chevron " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
+
+            </summary>
+
+            <div class="facets__values"><ul class="facets__list" role="list"><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-1-1"
+                          form="CollectionSort-main"
+                          name="filter.v.option.size"
+                          value="S"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-1-1"><span class="facets__label-text">S</span><span class="facets__count">3</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-1-2"
+                          form="CollectionSort-main"
+                          name="filter.v.option.size"
+                          value="M"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-1-2"><span class="facets__label-text">M</span><span class="facets__count">3</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-1-3"
+                          form="CollectionSort-main"
+                          name="filter.v.option.size"
+                          value="L"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-1-3"><span class="facets__label-text">L</span><span class="facets__count">3</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-1-4"
+                          form="CollectionSort-main"
+                          name="filter.v.option.size"
+                          value="XL"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-1-4"><span class="facets__label-text">XL</span><span class="facets__count">2</span></label>
+                      </li></ul></div>
+          </details><details
+            class="facets__group"
+            
+          >
+            <summary class="facets__summary">
+              <span class="facets__summary-label">Colour</span><svg class="icon icon--chevron " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
+
+            </summary>
+
+            <div class="facets__values"><ul class="facets__list" role="list"><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-2-1"
+                          form="CollectionSort-main"
+                          name="filter.v.option.colour"
+                          value="ink"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-2-1"><span
+                              class="facets__swatch"
+                              style="--facet-swatch: #25231F"
+                              aria-hidden="true"
+                            ></span><span class="facets__label-text">Ink</span><span class="facets__count">5</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-2-2"
+                          form="CollectionSort-main"
+                          name="filter.v.option.colour"
+                          value="bone"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-2-2"><span
+                              class="facets__swatch"
+                              style="--facet-swatch: #E6DFD0"
+                              aria-hidden="true"
+                            ></span><span class="facets__label-text">Bone</span><span class="facets__count">3</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-2-3"
+                          form="CollectionSort-main"
+                          name="filter.v.option.colour"
+                          value="olive"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-2-3"><span
+                              class="facets__swatch"
+                              style="--facet-swatch: #5B6550"
+                              aria-hidden="true"
+                            ></span><span class="facets__label-text">Olive</span><span class="facets__count">3</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-2-4"
+                          form="CollectionSort-main"
+                          name="filter.v.option.colour"
+                          value="stone"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-2-4"><span
+                              class="facets__swatch"
+                              style="--facet-swatch: #9C968B"
+                              aria-hidden="true"
+                            ></span><span class="facets__label-text">Stone</span><span class="facets__count">1</span></label>
+                      </li><li class="facets__value">
+                        <input
+                          type="checkbox"
+                          class="facets__checkbox visually-hidden"
+                          id="CollectionSortBy-main-2-5"
+                          form="CollectionSort-main"
+                          name="filter.v.option.colour"
+                          value="clay"
+                          
+                        >
+                        <label class="facets__label" for="CollectionSortBy-main-2-5"><span
+                              class="facets__swatch"
+                              style="--facet-swatch: #A3502F"
+                              aria-hidden="true"
+                            ></span><span class="facets__label-text">Clay</span><span class="facets__count">1</span></label>
+                      </li></ul></div>
+          </details><details
+            class="facets__group"
+            
+          >
+            <summary class="facets__summary">
+              <span class="facets__summary-label">Price</span><svg class="icon icon--chevron " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 5.5 16 12l-6.5 6.5"/></svg>
+
+            </summary>
+
+            <div class="facets__values"><div class="facets__price">
+                    <div class="facets__price-field">
+                      <label for="CollectionSortBy-main-price-min">
+                        From
+                      </label>
+                      <input
+                        id="CollectionSortBy-main-price-min"
+                        form="CollectionSort-main"
+                        class="facets__price-input"
+                        type="number"
+                        inputmode="numeric"
+                        name="filter.v.price.gte"
+                        value=""
+                        min="0"
+                        max="120"
+                        placeholder="0"
+                      >
+                    </div>
+                    <div class="facets__price-field">
+                      <label for="CollectionSortBy-main-price-max">
+                        To
+                      </label>
+                      <input
+                        id="CollectionSortBy-main-price-max"
+                        form="CollectionSort-main"
+                        class="facets__price-input"
+                        type="number"
+                        inputmode="numeric"
+                        name="filter.v.price.lte"
+                        value=""
+                        min="0"
+                        max="120"
+                        placeholder="120"
+                      >
+                    </div>
+                  </div></div>
+          </details></div><div class="facets__footer">
+      <button type="submit" form="CollectionSort-main" class="button button--primary button--full">
+        Apply
+      </button></div>
+  </div><div class="main-collection__toolbar"><button
+                type="button"
+                class="button button--secondary main-collection__filter-toggle"
+                data-facets-toggle
+                aria-expanded="false"
+                hidden
+              >
+                Filter</button><p class="main-collection__count">
+                6 products
+              </p><form
+                method="get"
+                action="collection.html"
+                id="CollectionSort-main"
+                class="main-collection__sort"
+                data-collection-sort
+              ><label class="main-collection__sort-label" for="CollectionSortBy-main">
+                  Sort by
+                </label>
+                <select
+                  class="main-collection__sort-select"
+                  id="CollectionSortBy-main"
+                  name="sort_by"
+                  data-collection-sort-select
+                ><option
+                      value="manual"
+                      selected
+                    >
+                      Featured
+                    </option><option
+                      value="best-selling"
+                      
+                    >
+                      Best selling
+                    </option><option
+                      value="price-ascending"
+                      
+                    >
+                      Price, low to high
+                    </option><option
+                      value="price-descending"
+                      
+                    >
+                      Price, high to low
+                    </option></select><button
+                  type="submit"
+                  class="button button--secondary main-collection__sort-submit"
+                  data-collection-sort-submit
+                >
+                  Sort
+                </button>
+              </form></div><ul class="product-grid" role="list"><li class="product-grid__item">
+              <article class="product-card">
+  <a class="product-card__link" href="product-everyday-tee.html">
+    <div class="product-card__media"><img class="product-card__image" src="img/product-tee-ink.webp" srcset="img/product-tee-ink.webp 180w, img/product-tee-ink.webp 240w, img/product-tee-ink.webp 320w, img/product-tee-ink.webp 400w, img/product-tee-ink.webp 480w, img/product-tee-ink.webp 600w, img/product-tee-ink.webp 760w, img/product-tee-ink.webp 900w, img/product-tee-ink.webp 1100w, img/product-tee-ink.webp 1200w" sizes="(min-width: 1440px) 313px, (min-width: 1280px) calc((100vw - 96px - 96px) / 4), (min-width: 1024px) calc((100vw - 96px - 64px) / 3), (min-width: 768px) calc((100vw - 64px - 32px) / 2), (min-width: 320px) calc((100vw - 48px - 16px) / 2), calc((100vw - 48px - 0px) / 1)" width="1200" height="1200" loading="eager" decoding="async" alt="Everyday Oversized Tee in Ink"></div>
+
+    <h2 class="product-card__title">Everyday Oversized Tee</h2></a><p class="product-card__price"><span class="product-card__price-current">$48.00</span></p><div class="product-card__swatches"><span class="visually-hidden">Colour: Ink, Bone, Olive</span><span class="product-card__swatch" style="--swatch-fill: #25231F;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #E6DFD0;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #5B6550;" aria-hidden="true"></span></div></article>
+
+            </li><li class="product-grid__item">
+              <article class="product-card">
+  <a class="product-card__link" href="product-heavyweight-hoodie.html">
+    <div class="product-card__media"><img class="product-card__image" src="img/product-hoodie-ink.webp" srcset="img/product-hoodie-ink.webp 180w, img/product-hoodie-ink.webp 240w, img/product-hoodie-ink.webp 320w, img/product-hoodie-ink.webp 400w, img/product-hoodie-ink.webp 480w, img/product-hoodie-ink.webp 600w, img/product-hoodie-ink.webp 760w, img/product-hoodie-ink.webp 900w, img/product-hoodie-ink.webp 1100w, img/product-hoodie-ink.webp 1200w" sizes="(min-width: 1440px) 313px, (min-width: 1280px) calc((100vw - 96px - 96px) / 4), (min-width: 1024px) calc((100vw - 96px - 64px) / 3), (min-width: 768px) calc((100vw - 64px - 32px) / 2), (min-width: 320px) calc((100vw - 48px - 16px) / 2), calc((100vw - 48px - 0px) / 1)" width="1200" height="1200" loading="lazy" decoding="async" alt="Heavyweight Hoodie in Ink"></div>
+
+    <h2 class="product-card__title">Heavyweight Hoodie</h2></a><p class="product-card__price"><span class="visually-hidden">Sale price</span>
+        <span class="product-card__price-current">$98.00</span>
+        <span class="visually-hidden">Regular price</span>
+        <s class="product-card__price-compare">$120.00</s></p><div class="product-card__swatches"><span class="visually-hidden">Colour: Ink, Bone, Olive</span><span class="product-card__swatch" style="--swatch-fill: #25231F;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #E6DFD0;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #5B6550;" aria-hidden="true"></span></div></article>
+
+            </li><li class="product-grid__item">
+              <article class="product-card">
+  <a class="product-card__link" href="product-fleece-crew.html">
+    <div class="product-card__media"><img class="product-card__image" src="img/product-crew-olive.webp" srcset="img/product-crew-olive.webp 180w, img/product-crew-olive.webp 240w, img/product-crew-olive.webp 320w, img/product-crew-olive.webp 400w, img/product-crew-olive.webp 480w, img/product-crew-olive.webp 600w, img/product-crew-olive.webp 760w, img/product-crew-olive.webp 900w, img/product-crew-olive.webp 1100w, img/product-crew-olive.webp 1200w" sizes="(min-width: 1440px) 313px, (min-width: 1280px) calc((100vw - 96px - 96px) / 4), (min-width: 1024px) calc((100vw - 96px - 64px) / 3), (min-width: 768px) calc((100vw - 64px - 32px) / 2), (min-width: 320px) calc((100vw - 48px - 16px) / 2), calc((100vw - 48px - 0px) / 1)" width="1200" height="1200" loading="lazy" decoding="async" alt="Fleece Crew in Olive"></div>
+
+    <h2 class="product-card__title">Fleece Crew</h2></a><p class="product-card__price"><span class="product-card__price-current">$84.00</span></p><div class="product-card__swatches"><span class="visually-hidden">Colour: Olive, Stone, Ink</span><span class="product-card__swatch" style="--swatch-fill: #5B6550;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #9C968B;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #25231F;" aria-hidden="true"></span></div></article>
+
+            </li><li class="product-grid__item">
+              <article class="product-card">
+  <a class="product-card__link" href="product-six-panel-cap.html">
+    <div class="product-card__media"><img class="product-card__image" src="img/product-cap-ink.webp" srcset="img/product-cap-ink.webp 180w, img/product-cap-ink.webp 240w, img/product-cap-ink.webp 320w, img/product-cap-ink.webp 400w, img/product-cap-ink.webp 480w, img/product-cap-ink.webp 600w, img/product-cap-ink.webp 760w, img/product-cap-ink.webp 900w, img/product-cap-ink.webp 1100w, img/product-cap-ink.webp 1200w" sizes="(min-width: 1440px) 313px, (min-width: 1280px) calc((100vw - 96px - 96px) / 4), (min-width: 1024px) calc((100vw - 96px - 64px) / 3), (min-width: 768px) calc((100vw - 64px - 32px) / 2), (min-width: 320px) calc((100vw - 48px - 16px) / 2), calc((100vw - 48px - 0px) / 1)" width="1200" height="1200" loading="lazy" decoding="async" alt="Six-Panel Cap in Ink"></div>
+
+    <h2 class="product-card__title">Six-Panel Cap</h2></a><p class="product-card__price"><span class="product-card__price-current">$36.00</span></p><div class="product-card__swatches"><span class="visually-hidden">Colour: Ink, Bone</span><span class="product-card__swatch" style="--swatch-fill: #25231F;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #E6DFD0;" aria-hidden="true"></span></div></article>
+
+            </li><li class="product-grid__item">
+              <article class="product-card">
+  <a class="product-card__link" href="product-canvas-tote.html">
+    <div class="product-card__media"><img class="product-card__image" src="img/product-tote-canvas.webp" srcset="img/product-tote-canvas.webp 180w, img/product-tote-canvas.webp 240w, img/product-tote-canvas.webp 320w, img/product-tote-canvas.webp 400w, img/product-tote-canvas.webp 480w, img/product-tote-canvas.webp 600w, img/product-tote-canvas.webp 760w, img/product-tote-canvas.webp 900w, img/product-tote-canvas.webp 1100w, img/product-tote-canvas.webp 1200w" sizes="(min-width: 1440px) 313px, (min-width: 1280px) calc((100vw - 96px - 96px) / 4), (min-width: 1024px) calc((100vw - 96px - 64px) / 3), (min-width: 768px) calc((100vw - 64px - 32px) / 2), (min-width: 320px) calc((100vw - 48px - 16px) / 2), calc((100vw - 48px - 0px) / 1)" width="1200" height="1200" loading="lazy" decoding="async" alt=""></div>
+
+    <h2 class="product-card__title">Canvas Tote</h2></a><p class="product-card__price"><span class="product-card__price-current">$28.00</span></p></article>
+
+            </li><li class="product-grid__item">
+              <article class="product-card product-card--sold-out">
+  <a class="product-card__link" href="product-rib-beanie.html">
+    <div class="product-card__media"><img class="product-card__image" src="img/product-beanie-clay.webp" srcset="img/product-beanie-clay.webp 180w, img/product-beanie-clay.webp 240w, img/product-beanie-clay.webp 320w, img/product-beanie-clay.webp 400w, img/product-beanie-clay.webp 480w, img/product-beanie-clay.webp 600w, img/product-beanie-clay.webp 760w, img/product-beanie-clay.webp 900w, img/product-beanie-clay.webp 1100w, img/product-beanie-clay.webp 1200w" sizes="(min-width: 1440px) 313px, (min-width: 1280px) calc((100vw - 96px - 96px) / 4), (min-width: 1024px) calc((100vw - 96px - 64px) / 3), (min-width: 768px) calc((100vw - 64px - 32px) / 2), (min-width: 320px) calc((100vw - 48px - 16px) / 2), calc((100vw - 48px - 0px) / 1)" width="1200" height="1200" loading="lazy" decoding="async" alt="Rib Beanie in Clay"><span class="product-card__badge" aria-hidden="true">Sold out</span></div>
+
+    <h2 class="product-card__title">Rib Beanie</h2> <span class="visually-hidden">Sold out</span></a><p class="product-card__price"><span class="product-card__price-current">$32.00</span></p><div class="product-card__swatches"><span class="visually-hidden">Colour: Clay, Ink</span><span class="product-card__swatch" style="--swatch-fill: #A3502F;" aria-hidden="true"></span><span class="product-card__swatch" style="--swatch-fill: #25231F;" aria-hidden="true"></span></div></article>
+
+            </li></ul></div>
+</div>
+</div>
+</main>
+<div id="shopify-section-cart-drawer" class="shopify-section"><link rel="stylesheet" href="assets/section-cart-drawer.css">
+
+<div
+  class="cart-drawer surface-dark"
+  id="CartDrawer"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="CartDrawerTitle"
+  data-cart-drawer
+  data-auto-open="true"
+  hidden
+><div class="cart-drawer__overlay" data-cart-overlay aria-hidden="true"></div>
+
+  <div class="cart-drawer__panel">
+    <div class="cart-drawer__header"><h2 class="cart-drawer__title" id="CartDrawerTitle" tabindex="-1">
+        Your cart
+      </h2>
+      <button type="button" class="cart-drawer__close" data-cart-close>
+        <svg class="icon icon--close " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.4 6.4 17.6 17.6"/><path d="M17.6 6.4 6.4 17.6"/></svg>
+
+        <span class="visually-hidden">Close cart</span>
+      </button>
+    </div><div class="visually-hidden" role="status" aria-live="polite" data-cart-drawer-status></div><p class="cart-drawer__error" data-cart-error role="alert" hidden></p>
+
+    <div class="cart-drawer__inner" data-cart-drawer-inner><div class="cart-empty">
+  <p class="cart-empty__title">Your cart is empty.</p>
+  <p class="cart-empty__body">Find something you'll wear on repeat.</p>
+  <a class="button button--accent" href="index.html">
+    Shop the collection
+    <svg class="icon icon--arrow " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h15.5"/><path d="M13.5 6 19.5 12l-6 6"/></svg>
+
+  </a>
+</div>
+</div>
+  </div>
+</div>
+
+
+</div>
+<div id="CartStatus" class="visually-hidden" role="status" aria-live="polite" data-cart-no-inert></div>
+<div hidden data-cart-no-inert data-cart-strings
+  data-added="Added to your cart."
+  data-updated="Cart updated."
+  data-removed="Removed from your cart."
+  data-note-saved="Order note saved."
+  data-quantity-announce="Quantity: [count]"
+  data-error-generic="Unable to update your cart. Please try again."
+  data-error-network="We could not reach the store. Check your connection and try again."></div>
+<div id="shopify-section-brand-values" class="shopify-section"><link rel="stylesheet" href="assets/section-brand-values.css">
+
+<div class="brand-values surface-dark brand-values--cols-4 brand-values--dividers">
+  <div class="brand-values__inner container"><ul class="brand-values__list" role="list"><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--crown brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.75 17.75V7.25l4.5 4.25L12 5.5l3.75 6 4.5-4.25v10.5Z"/><path d="M3.75 14.5h16.5"/></svg>
+<span class="brand-values__title">Premium Quality</span><span class="brand-values__sub">Built To Last</span></div></li><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--community brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8.25" r="2.9"/><path d="M6.9 19.25a5.1 5.1 0 0 1 10.2 0"/><circle cx="5.3" cy="10.4" r="2.15"/><path d="M2 18.5a3.75 3.75 0 0 1 2.95-3.66"/><circle cx="18.7" cy="10.4" r="2.15"/><path d="M22 18.5a3.75 3.75 0 0 0-2.95-3.66"/></svg>
+<span class="brand-values__title">The Club</span><span class="brand-values__sub">Early Access To Drops</span></div></li><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--globe brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/><path d="M3 12h18"/><path d="M4.2 7.5h15.6"/><path d="M4.2 16.5h15.6"/><path d="M12 3a5 9 0 0 1 0 18"/><path d="M12 3a5 9 0 0 0 0 18"/></svg>
+<span class="brand-values__title">Shipping</span><span class="brand-values__sub">Tracked Delivery</span></div></li><li
+          class="brand-values__item"
+          
+        ><div class="brand-values__body">
+              <svg class="icon icon--diamond brand-values__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6.75 3.75h10.5L21 9.5 12 20.5 3 9.5Z"/><path d="M3 9.5h18"/><path d="m6.75 3.75 2.75 5.75L12 20.5"/><path d="m17.25 3.75-2.75 5.75L12 20.5"/></svg>
+<span class="brand-values__title">Limited Runs</span><span class="brand-values__sub">Never Mass-Made</span></div></li></ul></div>
+</div>
+</div>
+<div id="shopify-section-footer" class="shopify-section"><link rel="stylesheet" href="assets/section-footer.css"><footer class="footer surface-dark" role="contentinfo">
+  <div class="footer__inner container"><div class="footer__brand"><a class="footer__logo-link" href="index.html"><span class="footer__wordmark">Sable</span></a><div class="footer__lockup-text"><p class="footer__tagline">Made Slowly.<br />
+Worn Daily.</p></div><nav class="footer__social" aria-label="Social"><ul class="footer__social-list" role="list"><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--instagram " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="17" height="17" rx="4.75"/><circle cx="12" cy="12" r="3.9"/><path d="M16.95 7.05h.01"/></svg>
+
+                    <span class="visually-hidden">Instagram</span>
+                  </a>
+                </li><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--facebook " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M17.5 3.25h-2.75a4.75 4.75 0 0 0-4.75 4.75v2.75H7.25v4h2.75v6.5h4v-6.5h2.75l.75-4h-3.5V8a.75.75 0 0 1 .75-.75h2.75Z"/></svg>
+
+                    <span class="visually-hidden">Facebook</span>
+                  </a>
+                </li><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--tiktok " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9.5 11.75a4.25 4.25 0 1 0 4.25 4.25V3.75a5.25 5.25 0 0 0 5.25 5.25"/></svg>
+
+                    <span class="visually-hidden">TikTok</span>
+                  </a>
+                </li><li>
+                  <a class="footer__link footer__social-link" href="#">
+                    <svg class="icon icon--youtube " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2.9 16.85a23.6 23.6 0 0 1 0-9.7 2.1 2.1 0 0 1 1.47-1.47 48.5 48.5 0 0 1 15.26 0 2.1 2.1 0 0 1 1.47 1.47 23.6 23.6 0 0 1 0 9.7 2.1 2.1 0 0 1-1.47 1.47 48.5 48.5 0 0 1-15.26 0 2.1 2.1 0 0 1-1.47-1.47Z"/><path d="m10 14.9 4.7-2.9-4.7-2.9Z"/></svg>
+
+                    <span class="visually-hidden">YouTube</span>
+                  </a>
+                </li></ul>
+          </nav><p class="footer__strapline">Built To Be Worn</p></div><div class="footer__blocks"><nav
+                  class="footer__column"
+                  aria-labelledby="FooterMenu-shop"
+                  
+                ><h2 class="footer__heading" id="FooterMenu-shop">Shop</h2>
+                  <ul class="footer__menu" role="list"><li>
+                        <a
+                          class="footer__link"
+                          href="collection.html"
+                          
+                        >All products</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="collection.html"
+                          
+                        >New arrivals</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="collection.html"
+                          
+                        >Best sellers</a>
+                      </li></ul>
+                </nav><nav
+                  class="footer__column"
+                  aria-labelledby="FooterMenu-help"
+                  
+                ><h2 class="footer__heading" id="FooterMenu-help">Help</h2>
+                  <ul class="footer__menu" role="list"><li>
+                        <a
+                          class="footer__link"
+                          href="policy.html"
+                          
+                        >Shipping</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="policy.html"
+                          
+                        >Returns</a>
+                      </li><li>
+                        <a
+                          class="footer__link"
+                          href="our-story.html"
+                          
+                        >Our story</a>
+                      </li></ul>
+                </nav><div class="footer__column" ><h2 class="footer__heading">Contact</h2><div class="footer__text"><p>hello@example.com<br>Mon to Fri, 9 to 5</p></div></div></div><div class="footer__utility"><nav class="footer__policies" aria-label="Policies">
+            <ul class="footer__policy-list" role="list"><li>
+                    <a class="footer__link" href="policy.html">Refund policy</a>
+                  </li><li>
+                    <a class="footer__link" href="policy.html">Privacy policy</a>
+                  </li><li>
+                    <a class="footer__link" href="policy.html">Terms of service</a>
+                  </li><li>
+                    <a class="footer__link" href="policy.html">Shipping policy</a>
+                  </li></ul>
+          </nav></div><div class="footer__bottom">
+      <p class="footer__copyright">
+        © 2026 Sable
+      </p>
+    </div></div>
+</footer>
+
+
+</div>
+</body></html>
